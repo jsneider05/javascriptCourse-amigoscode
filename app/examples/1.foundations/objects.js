@@ -20,10 +20,9 @@ var person = {
 };
 
 log(JSON.stringify(person));
-
-log(person.name);
-log(person.age);
-log(person.hasDriverLicence);
-log(JSON.stringify(person.address))
-
 log(Object.values(person));
+log(JSON.stringify(person.address));
+
+log(`Name: ${person.name}, type: ${typeof(person.name)}`);
+log(`Age: ${person.age}, type: ${typeof(person.age)}`);
+log(`HasDriverLicence: ${person.hasDriverLicence}, type: ${typeof(person.hasDriverLicence)}`);
