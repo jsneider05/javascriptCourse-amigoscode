@@ -7,14 +7,32 @@ import { log, logTitle } from "logger";
 logTitle("Functions");
 /* coding examples */
 
+/*
+A function is a Javascript procedure, it´s a set of statements that
+allow perform a task or calculate a value.
+*/
+
+/* Function declaration */
 function addNumbers(n1, n2) {
   // start of function boddy
   // Define logic
-  // 3 + 2
   var result = n1+n2;
   return result;
   // end of function boddy
 }
 
 var result = addNumbers(10, 20);
-log(result)
+log(result);
+
+/* Function expression or anonymous */
+
+var multiplyNumbers = function(n1, n2) {
+  var result = n1 * n2;
+  return result;
+}
+
+var resultMultiplication = multiplyNumbers(10, 20);
+log(resultMultiplication);
+
+
+
