@@ -12,7 +12,7 @@ var age = 21.5;
 var hasDriverLicence = true;
 var empty = undefined;
 
-log(name + " type = " + typeof name);
-log(age + " type = " + typeof age);
-log(hasDriverLicence + " type = " + typeof hasDriverLicence);
-log(empty + " type = " + typeof empty);
+log(`${name} type= ${typeof(name)}`);
+log(`${age} type= ${typeof(age)}`);
+log(`${hasDriverLicence} type= ${typeof(hasDriverLicence)}`);
+log(`${empty} type= ${typeof(empty)}`);
