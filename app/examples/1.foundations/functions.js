@@ -34,5 +34,19 @@ var multiplyNumbers = function(n1, n2) {
 var resultMultiplication = multiplyNumbers(10, 20);
 log(resultMultiplication);
 
+/* Some functions avaliables in Javascript */
+var person = {
+  name: "Anna",
+  age: 20
+}
+
+log(Object.keys(person));
+log(Object.values(person));
+
+log(person.name.toLowerCase());
+log(person.name.toUpperCase());
+log(person.name.endsWith("a"));
+log(person.name.startsWith("A"));
+
 
 
