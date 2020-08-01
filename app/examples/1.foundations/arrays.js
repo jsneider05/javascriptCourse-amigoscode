@@ -19,5 +19,5 @@ for (var n of names) {
 }
 
 names.forEach(function(n, index) {
-  log(index + " - " + n);
+  log(`${index} - ${n}`);
 });
