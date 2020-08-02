@@ -14,19 +14,27 @@ var mapCallback = function(n) {
 
 var map = [1, 2, 3, 4, 5].map(mapCallback);
 
+/* array */
+let numbers = [1, 2, 3, 4, 5];
+log(numbers);
+
+/* map function */
 log("[].map");
+var map = numbers.map(function(n) {
+  return n * 2;
+});
 log(map);
 
+/* filter function */
 log("[].filter");
-var filter = [1, 2, 3, 4, 5, 10, 29, 100].filter(function(n) {
+var filter = numbers.filter(function(n) {
   return n % 2 == 0;
 });
-
 log(filter);
 
+/* reduce function */
 log("[].reduce");
-var reduce = [1, 2, 3, 4, 5].reduce(function(accumulator, current) {
+var reduce = numbers.reduce(function(accumulator, current) {
   return accumulator + current;
 });
-
 log(reduce);
