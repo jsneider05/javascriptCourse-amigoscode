@@ -16,6 +16,10 @@ const name = {
   lastName: 'Jones'
 };
 
+/* You see this a lot with right react applications to pass down 
+    information from the main component to the sub-components
+    via props */
+
 const person = { ...address, ...name };
 
 log(JSON.stringify(person, null, 2));
