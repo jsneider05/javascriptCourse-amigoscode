@@ -6,10 +6,11 @@ import { log, logTitle } from 'logger';
 logTitle('Const keyword');
 
 let name = 'Maria';
+log(`${name} - ${typeof name}`);
 name = {};
+log(`${name} - ${typeof name}`);
 name = 2;
-
-log(name);
+log(`${name} - ${typeof name}`);
 
 /* ************************* */
 
