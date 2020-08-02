@@ -11,8 +11,8 @@ for(var i = 0; i<10; i++){
 
 log(i);
 
-for(let i = 0; i<10; i++){
-  log(i);
+for(let j = 0; j<10; j++){
+  log(j);
 }
 
-log(i);
+log(j);
