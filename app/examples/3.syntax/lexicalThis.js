@@ -26,7 +26,7 @@ const person = {
       log(`${that.name} has ${car}`);
     }); */
 
-    /* The easy way to fix this simply place an arrow function 
+    /* The easy way to fix this is simply placing an arrow function, 
         in this way we bind to the actual object of the "this" keyword */
     this.cars.forEach( car => {
       log(`${this.name} has ${car}`);
