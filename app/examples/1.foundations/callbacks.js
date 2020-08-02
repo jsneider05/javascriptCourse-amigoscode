@@ -7,6 +7,9 @@ import { log, logTitle } from 'logger';
 logTitle('Callbacks')
 /* coding examples */
 
+/* Callback is a functions which is passed inside another function 
+  and then that function gets executed at so point */
+
 function callbackExample(name, callback) {
   log(callback(name));
 }
