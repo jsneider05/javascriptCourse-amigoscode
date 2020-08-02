@@ -10,9 +10,14 @@ const arrayTwo = ['Said', 'Ismail', 'Aisha'];
 
 const concatArray = [...arrayOne, ...arrayTwo];
 
-concatArray.forEach(function(name) {
+/* Arrow function */
+concatArray.forEach((name) => {
   log(name);
 });
+
+/* concatArray.forEach(function (name) {
+  log(name);
+}); */
 
 const name = 'Marian';
 const nameToArray = [...name];
