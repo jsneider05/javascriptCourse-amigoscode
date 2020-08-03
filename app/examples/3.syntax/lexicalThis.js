@@ -32,6 +32,14 @@ const person = {
       log(`${this.name} has ${car}`);
     });
   }
+
+  /* other form for regular function */
+  /* ,
+  toString () {
+    this.cars.forEach( car => {
+      log(`${this.name} has ${car}`);
+    });
+  } */
 }
 
 person.toString();
