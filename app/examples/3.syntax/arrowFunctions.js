@@ -37,6 +37,10 @@ const milesToKm = function(miles) {
 */
 const milesToKm = miles => miles * 1.60934;
 
+/* No arguments */
+const greet = _ => log("hi");
+greet();
+
 log(hello());
 log(powers);
 log(add(100,100));
