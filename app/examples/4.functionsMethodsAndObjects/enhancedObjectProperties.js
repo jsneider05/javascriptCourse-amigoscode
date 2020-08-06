@@ -5,6 +5,17 @@ import { log, logTitle } from 'logger';
 /* your imports */
 logTitle('Enhanced Object Properties');
 
+/* const calculator = name => {
+  return {
+    name: name,
+    add: function (n1, n2) {
+      return n1 + n2;
+    }
+  }
+} */
+
+/* Enhanced */
+/* We can construct the property name as we wish */
 const pricePropName = "PRICE";
 
 const calculator = (name, price) => {
