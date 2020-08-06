@@ -66,6 +66,16 @@ let me = {
 };
 me.thisInArrow(); 
 me.thisInRegular();
+/*
+Arrow function expressions are all suited as methods, 
+and they cannot be used as constructors.
+*/
+
+/*
+For arrow functions, the value of this is determined 
+based on where the arrow function is declared, 
+not where or how it is invoked.
+*/
 
 /*
 Using new keyword:

@@ -11,6 +11,16 @@ logTitle('Lexical this');
 const person = {
   name: 'Alex',
   cars: ['ferrari', 'lambo'],
+  /*
+  If the arrow function syntax would have been used, 
+  instead of the function declaration in the example above, 
+  the value of this inside that arrow function would have 
+  been the global window object.
+  This is because its parent execution context would have 
+  been the global execution context. 
+  The fact that it is declared inside an object does not 
+  change anything.
+  */
   /* In this case we cant use an arrow function because we lose
       the contex of the "this" keyword, we dont know which person
       cars we are referencing to */
