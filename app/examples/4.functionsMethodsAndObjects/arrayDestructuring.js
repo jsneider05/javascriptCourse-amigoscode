@@ -11,6 +11,7 @@ const names = ['Anna', 'Mariam', 'Joe', 'Mark', 'Matt'];
 // const mariam = names[1];
 // const joe = names[2];
 
+/* Array destructuring allow us to put values from an array */
 const [anna, , joe, ...restOfNames] = names;
 
 log(`${anna} ${joe}`);
