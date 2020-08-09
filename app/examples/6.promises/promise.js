@@ -35,3 +35,32 @@ promise.then(response => {
 }).catch(error => {
   log(error);
 });
+
+/* Example 2 */
+const p1 = Promise.resolve(1);
+
+p1
+  .then( response => {
+    log(response);
+    return response + 5;
+  })
+  .then( response => {
+    log(response);
+    return Promise.resolve( response + 5 );
+  })
+  .then( response => Promise.reject('Error!'))
+  .then( response => log('This wont be called'))
+  .catch( error => log(error));
+
+/* Example 3 */
+const delayed = data => new Promise((resolve, reject) => setTimeout(() => resolve(data), 900));
+const promiseReject = () => new Promise((resolve, reject) => setTimeout(() => reject('Error!'), 500));
+
+delayed(7)
+  .then(data => {
+    log(data);
+    return delayed(data + 7);
+  })
+  .then(data => log(data))
+  .then(data => promiseReject())
+  .catch( error => log(error));

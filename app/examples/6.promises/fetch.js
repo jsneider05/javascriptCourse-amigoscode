@@ -24,3 +24,17 @@ const getRandomUsers = n => {
 }
 
 getRandomUsers(5);
+
+/* Example 2 */
+
+// posts: http://jsonplaceholder.typicode.com/posts
+
+fetch('http://jsonplaceholder.typicode.com/users')
+.then(data => data.json())
+.then(users => {
+  log(users.length)
+  users.forEach( user => {
+    const { id, username, address : { city } } = user;
+    log(`${id} - ${username} - ${city}`);
+  })
+});
