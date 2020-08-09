@@ -11,7 +11,7 @@ const namesPromise = new Promise((resolve, reject) => {
   }, 3000);
 
   setTimeout(() => {
-    reject("no data back from the server, there was an error");
+    reject('no data back from the server, there was an error');
   }, 5000);
 });
 
@@ -21,18 +21,18 @@ const surnamesPromise = new Promise((resolve, reject) => {
   }, 3000);
 
   setTimeout(() => {
-    reject("no data back from the server, there was an error");
+    reject('no data back from the server, there was an error');
   }, 5000);
 });
 
-Promise.all([namesPromise, surnamesPromise]).then(data => {
+/* All the promises must be fulfilled otherwise we will uncaught an error */
+Promise.all([namesPromise, surnamesPromise]).then( data => {
   const [names, surnames] = data;
-  for (var i = 0; i < names.length; i++) {
+  for (let i = 0; i < names.length; i++) {
     const name = names[i];
     const surname = surnames[i];
     log(`${name} ${surname}`);
   }
-
-}).catch(error => {
+}).catch( error => {
   log(error);
 });
