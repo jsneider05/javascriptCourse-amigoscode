@@ -5,6 +5,9 @@ import { log, logTitle } from 'logger';
 /* your imports */
 logTitle('Generators');
 
+/* Generator is a function that can be pause, so this allow us to
+    write our code in an asynchronous fashion */
+
 const getNumbers = function* () {
   yield 1;
   yield "hello";
