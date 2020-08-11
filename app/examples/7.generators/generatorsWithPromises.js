@@ -22,7 +22,7 @@ getRandomUsers(5)
       log(`${gender} - ${email}`);
     });
   })
-  .catch(error => log);
+  .catch(error => log(error));
 
   /* Example 2: */
 const getPosts = co(function* () {
@@ -38,4 +38,4 @@ getPosts()
       log(`PostId ${id} - Tittle: ${title}`);
     })
   })
-  .catch(error => log);
+  .catch(error => log(error));
