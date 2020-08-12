@@ -39,6 +39,7 @@ var reduce = numbers.reduce(function(accumulator, current) {
 });
 log(reduce);
 
+/* ------------------------------------------------------------------ */
 /* Filter examples */
 
 const numberList = [1,2,3,4,5,6,7,8,9];
@@ -61,3 +62,40 @@ const cats = pets.filter(x => x.type == 'cat');
 // log(JSON.stringify(cats));
 
 log(JSON.stringify(pets.filter(x => x.age > 5)));
+
+/* ------------------------------------------------------------------ */
+/* Map examples */
+
+const multiplyNumbers = numberList.map(num => num * 2);
+// log(multiplyNumbers);
+const pair = numberList.map(num => [num, num*num]);
+// log(pair);
+
+const ageAverage = pets
+                    .map(pet => pet.age)
+                    .reduce((total, age) => total + age) / pets.length;
+// log(ageAverage);
+
+/* ------------------------------------------------------------------ */
+/* Reduce examples */
+
+const getSum = n => n.reduce((total, num) => total + num);
+// log(getSum(numberList));
+
+/* The 0 number at the end correspond at the initial value for accumulator */
+const reducer = [1,2].reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+// log(reducer);
+
+/* Indexing the pets array with .reduce */
+const indexedPets = pets.reduce((acc, el) => ({
+  ...acc,
+  [el.name]: el
+}), {});
+// log(JSON.stringify(indexedPets, null, 2));
+// log(JSON.stringify(indexedPets['Rocky'], null, 2));
+
+const nestedArray = [1, [2, 3], 4, [5]];
+// [1, 2, 3, 4, 5]
+
+const plainArray = nestedArray.reduce((acc, el) => acc.concat(el), []);
+log(plainArray);
