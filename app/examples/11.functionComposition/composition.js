@@ -37,6 +37,7 @@ const user = getName(users[0])
 log(user);
 
 /* compose function */
+  /* x => f(g(x)) == compose(f,g) */
 const compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x);
 // const getNameCompose = user => compose(buildName, capitalize)(user);
   /* Point free or "programacion tacita" */
